@@ -45,7 +45,8 @@ EN = {
     # Bericht
     "Netzbericht": "Network report", "Layer": "Layer", "Filter": "Filter", "Erstellt am": "Created on",
     "Kurzfassung": "Summary", "keiner": "none",
-    "Anteil der Netzlänge mit gültigem Wert (Soll 100 %).": "Share of network length with a valid value (target 100 %).",
+    "Anteil der Netzlänge mit gültigem Wert (Soll 100 %).":
+        "Share of network length with a valid value (target 100 %).",
     "Erstellt mit dem QGIS-Plugin Netz-Report.": "Created with the QGIS plugin Netz-Report.",
     "Das Netz hat {km} km Leitungen in {n} Abschnitten.": "The network has {km} km of pipes in {n} sections.",
     "Häufigster Werkstoff ist {m} ({s} % der Länge).": "The most common material is {m} ({s} % of length).",

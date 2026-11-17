@@ -131,7 +131,8 @@ class NetzReportPlugin:
                     filled[q] = year is not None
                 else:
                     filled[q] = text(f[q]) is not None
-            records.append({"length_m": length, "material": mat, "dn": dn, "year": year, "group": grp, "filled": filled})
+            records.append({"length_m": length, "material": mat, "dn": dn, "year": year,
+                            "group": grp, "filled": filled})
         if not records:
             d.status.setText(tr("Keine Objekte gefunden (Filter prüfen)."))
             return
@@ -149,7 +150,9 @@ class NetzReportPlugin:
     def tables(self):
         r = self.result
         head = [tr("Klasse"), tr("Abschnitte"), tr("Länge (km)"), tr("Anteil (%)")]
-        rows = lambda t: [[k, fmt(n, 0), fmt(km, 2), fmt(s, 1)] for k, n, km, s in t]
+
+        def rows(t):
+            return [[k, fmt(n, 0), fmt(km, 2), fmt(s, 1)] for k, n, km, s in t]
         kz = [[tr("Leitungen (Abschnitte)"), fmt(r["count"], 0)], [tr("Leitungen (km)"), fmt(r["total_km"], 1)],
               [tr("Bezugsjahr"), str(r["ref_year"])]]
         if r["mean_year"]:
@@ -171,7 +174,9 @@ class NetzReportPlugin:
         """Same tables as tables(), but with plain numbers (for Excel)."""
         r = self.result
         head = [tr("Klasse"), tr("Abschnitte"), tr("Länge (km)"), tr("Anteil (%)")]
-        rows = lambda t: [[k, int(n), round(km, 2), round(s, 1)] for k, n, km, s in t]
+
+        def rows(t):
+            return [[k, int(n), round(km, 2), round(s, 1)] for k, n, km, s in t]
         kz = [[tr("Leitungen (Abschnitte)"), int(r["count"])], [tr("Leitungen (km)"), round(r["total_km"], 1)],
               [tr("Bezugsjahr"), int(r["ref_year"])]]
         if r["mean_year"]:
@@ -239,7 +244,8 @@ class NetzReportPlugin:
                  f"{tr('Erstellt am')}: {m['date']}</p>",
                  f"<h2>{tr('Kurzfassung')}</h2><p>{core.summary_text(r)}</p>"]
         for title, header, rows in self.tables():
-            parts.append(f"<h2>{title}</h2><table width='100%'><thead><tr>" + "".join(f"<th>{h}</th>" for h in header) + "</tr></thead><tbody>")
+            head_html = "".join(f"<th>{h}</th>" for h in header)
+            parts.append(f"<h2>{title}</h2><table width='100%'><thead><tr>{head_html}</tr></thead><tbody>")
             for row in rows:
                 parts.append("<tr>" + "".join(f"<td>{v}</td>" if j == 0 else f"<td align='right'>{v}</td>"
                                               for j, v in enumerate(row)) + "</tr>")

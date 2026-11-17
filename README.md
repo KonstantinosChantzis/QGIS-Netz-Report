@@ -2,7 +2,7 @@
 
 [English](#qgis-netz-report--network-statistics-and-report-for-utility-networks) | [Deutsch](#deutsch)
 
-**Netz-Report** is a QGIS plugin (Python / PyQGIS) that evaluates line layers of utility networks – water and gas pipes, power cables, fibre – with one click: length and share by **material**, **diameter class**, **age class** and **area**, plus the **data completeness** of selected fields (target/actual). The results are shown in tables and can be exported to **Excel** and as a **PDF report** with summary, key figures and data quality.
+**Netz-Report** is a QGIS plugin (Python / PyQGIS), published in the [official QGIS Plugin Repository](https://plugins.qgis.org/plugins/netz_report/), that evaluates line layers of utility networks – water and gas pipes, power cables, fibre – with one click: length and share by **material**, **diameter class**, **age class** and **area**, plus the **data completeness** of selected fields (target/actual). The results are shown in tables and can be exported to **Excel** and as a **PDF report** with summary, key figures and data quality.
 
 ![Netz-Report: settings and key figures](images/01_netz_report_kennzahlen.png)
 
@@ -55,10 +55,14 @@ The raw data of the district are not included in this repository. For a first tr
 
 ## Installation
 
+**From the QGIS Plugin Repository (recommended):** QGIS → **Plugins → Manage and Install Plugins → All** → search for **Netz-Report** → **Install Plugin**
+
+**From ZIP:**
 1. Download this repository as ZIP (**Code → Download ZIP**) and unpack it
 2. Zip only the folder `netz_report` (so that the ZIP contains `netz_report/…`)
 3. QGIS → **Plugins → Manage and Install Plugins → Install from ZIP** → select the ZIP
-4. A Netz-Report icon appears in the toolbar and under **Vector → Netz-Report**
+
+A Netz-Report icon appears in the toolbar and under **Vector → Netz-Report**.
 
 Requirements: QGIS 3.28 or newer (prepared for QGIS 4 / Qt6).
 
@@ -89,7 +93,6 @@ Requirements: QGIS 3.28 or newer (prepared for QGIS 4 / Qt6).
 
 - Processing algorithm so the report can be used in models and batch runs
 - Charts (bar charts per material and age class) in the PDF report
-- Publication in the official QGIS Plugin Repository
 
 ---
 
@@ -132,7 +135,7 @@ MIT License – see [LICENSE](LICENSE)
 
 [English](#qgis-netz-report--network-statistics-and-report-for-utility-networks) | [Deutsch](#deutsch)
 
-**Netz-Report** ist ein QGIS-Plugin (Python / PyQGIS), das Leitungslayer von Versorgungsnetzen – Wasser- und Gasleitungen, Stromkabel, Glasfaser – mit einem Klick auswertet: Länge und Anteil nach **Werkstoff**, **Nennweitenklasse**, **Altersklasse** und **Gebiet** sowie die **Vollständigkeit der Sachdaten** ausgewählter Felder (Soll–Ist). Die Ergebnisse werden in Tabellen angezeigt und können nach **Excel** und als **PDF-Bericht** mit Kurzfassung, Kennzahlen und Datenqualität exportiert werden.
+**Netz-Report** ist ein QGIS-Plugin (Python / PyQGIS), veröffentlicht im [offiziellen QGIS-Plugin-Repository](https://plugins.qgis.org/plugins/netz_report/),, das Leitungslayer von Versorgungsnetzen – Wasser- und Gasleitungen, Stromkabel, Glasfaser – mit einem Klick auswertet: Länge und Anteil nach **Werkstoff**, **Nennweitenklasse**, **Altersklasse** und **Gebiet** sowie die **Vollständigkeit der Sachdaten** ausgewählter Felder (Soll–Ist). Die Ergebnisse werden in Tabellen angezeigt und können nach **Excel** und als **PDF-Bericht** mit Kurzfassung, Kennzahlen und Datenqualität exportiert werden.
 
 ![Netz-Report: Einstellungen und Kennzahlen](images/01_netz_report_kennzahlen.png)
 
@@ -185,10 +188,14 @@ Die Rohdaten des Bezirks sind nicht im Repository enthalten. Zum Ausprobieren en
 
 ## Installation
 
+**Aus dem QGIS-Plugin-Repository (empfohlen):** QGIS → **Erweiterungen → Erweiterungen verwalten und installieren → Alle** → nach **Netz-Report** suchen → **Erweiterung installieren**
+
+**Aus ZIP:**
 1. Repository als ZIP herunterladen (**Code → Download ZIP**) und entpacken
 2. Nur den Ordner `netz_report` zippen (die ZIP-Datei muss `netz_report/…` enthalten)
 3. QGIS → **Erweiterungen → Erweiterungen verwalten und installieren → Aus ZIP installieren** → ZIP auswählen
-4. In der Werkzeugleiste erscheint ein Netz-Report-Symbol, außerdem unter **Vektor → Netz-Report**
+
+In der Werkzeugleiste erscheint ein Netz-Report-Symbol, außerdem unter **Vektor → Netz-Report**.
 
 Voraussetzung: QGIS 3.28 oder neuer (vorbereitet für QGIS 4 / Qt6).
 
@@ -219,7 +226,6 @@ Voraussetzung: QGIS 3.28 oder neuer (vorbereitet für QGIS 4 / Qt6).
 
 - Processing-Algorithmus für Modelle und Stapelverarbeitung
 - Diagramme (Balken je Werkstoff und Altersklasse) im PDF-Bericht
-- Veröffentlichung im offiziellen QGIS-Plugin-Repository
 
 ---
 

@@ -95,7 +95,9 @@ class NetzReportDialog(QDialog):
         if layer is not None:
             self.quality_fields.addItems([f.name() for f in layer.fields()])
             s = QgsSettings()
-            for cb, key in ((self.f_material, "material"), (self.f_dn, "dn"), (self.f_year, "year"), (self.f_group, "group")):
+            combos = ((self.f_material, "material"), (self.f_dn, "dn"),
+                      (self.f_year, "year"), (self.f_group, "group"))
+            for cb, key in combos:
                 name = s.value(S + key, "")
                 if name and layer.fields().indexOf(name) >= 0:
                     cb.setField(name)
